@@ -7,7 +7,7 @@ describe 'varnish::vcl' do
     context "on #{os}" do
       let(:facts) do
         facts.merge(kernel: 'Linux',
-                    osreleasemaj: facts[:operatingsystemrelease].split('.').first,
+                    osreleasemaj: facts[:os]['release']['major'],
                     pygpgme_installed: true)
       end
 
@@ -16,7 +16,7 @@ describe 'varnish::vcl' do
       let(:params) do
         {
           content: 'return(lookup)\n',
-          file: '/etc/varnish/default.vcl',
+          file: '/etc/varnish/default.vcl'
         }
       end
 
