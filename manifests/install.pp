@@ -8,6 +8,6 @@ class varnish::install {
   }
 
   package { $varnish::package_name:
-    ensure  => $varnish::package_ensure,
+    ensure => $varnish::package_ensure,
   }
 }
