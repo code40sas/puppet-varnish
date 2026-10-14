@@ -1,5 +1,8 @@
 # Specify the secret file for varnishadm
 # This file can be changed without notifying varnish
+#
+# @param secret
+#   secret
 class varnish::secret (
   Optional[String] $secret = undef,
 ) {

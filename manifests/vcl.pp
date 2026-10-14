@@ -3,6 +3,11 @@
 #
 # If the VCL fails to parse, the exec will fail
 # and Varnish will continue to run with the old config
+#
+# @param content
+#   content
+# @param file
+#  file
 define varnish::vcl (
   String $content,
   String $file = $name

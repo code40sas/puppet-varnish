@@ -33,12 +33,19 @@
 #   Hash of additional storage backends containing strings in the varnish format (passed to -s)
 # [*varnish_version*]
 #   Major Varnish version to use
-# [*vcl_reload*]
-#   Script to use to load new Varnish config
 # [*package_ensure*]
 #   Ensure specific package version for Varnish, eg 3.0.5-1.el6
 # [*runtime_params*]
 #   Hash of key:value runtime parameters
+# @param secret_file
+#  secret_file
+# @param storage_file
+#  storage_file
+# @param instance_name
+# @param package_name
+# @param service_name
+# @param vcl_reload_cmd
+# @param vcl_reload_path
 #
 class varnish (
   Hash $runtime_params                      = {},
